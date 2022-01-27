@@ -1,0 +1,18 @@
+{
+    "raw": {
+        "path": "./datasets"
+    },
+    "binary": {
+        "path": "./hdf-datasets"
+    },
+    "statistics": {
+        "path": "./_statistics"
+    },
+    "visualization": {
+        "path": "./_plots"
+    },
+    "banlist": [
+    ],
+    "allowlist": [
+    ]
+}
