@@ -108,3 +108,13 @@ def get_clique_num(df):
 
     return np.array(x), y.to_numpy()
 
+
+def temporal_pivoter(G, node_indexes=None, prefix=''):
+    from time import time
+    for i, tspan in enumerate(G.batch_iterator(node_indexes=node_indexes)):
+        subG = G[tspan].labels_to_indices()
+        num_of_cliques = pivoter(subG.tedges, prefix)
+        # row = np.array(num_of_cliques)
+        # mean_size = sum(row *
+        #                 np.array(range(2, len(row) + 2))) / sum(row)
+        yield num_of_cliques
