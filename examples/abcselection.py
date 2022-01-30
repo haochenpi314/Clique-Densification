@@ -655,10 +655,10 @@ def cap_node_num(emp_mean_clique_size, max_n):
     return [emp_mean_clique_size[0][:idx], emp_mean_clique_size[1][:idx]]
 
 
-def runABC(max_n: dict({'default': 100000})):
+def runABC(max_n: dict({'default': 100000}), log_dir='./logA'):
     emp_clique_nums = load_datasets(max_n)
     abc = ABCModelChoice(
-        emp_clique_nums, k=21, N=2500, log_dir='./logC', h_timeout=1)
+        emp_clique_nums, k=21, N=2500, log_dir=log_dir, h_timeout=1)
 
     abc.select()
 
