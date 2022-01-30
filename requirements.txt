@@ -1,0 +1,7 @@
+numpy
+pandas
+scipy
+click-repl
+natsort
+click
+matplotlib
